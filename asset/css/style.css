@@ -1,8 +1,8 @@
 html {
     margin: 0;
     width: 100%;
-    scrollbar-width: none;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 
 body {
@@ -12,13 +12,24 @@ body {
     flex-direction: column;
     width: 100%;
     position: relative;
-    color: rgb(31, 49, 66);
+    color: var(--color-text);
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+:root {
+    --color-text1: white;
+    --color-text: rgb(31, 49, 66);
+    --background-header: rgb(31, 49, 66);
+    --color-hover: rgb(128 119 252);
+    --background-section: aliceblue;
+    --background-bottum-hover: rgb(175 201 235);
 }
 
 header {
-    background-color: rgb(31, 49, 66);
+    background-color: var(--background-header);
     display: flex;
     gap: 40%;
     flex-direction: row;
@@ -31,6 +42,11 @@ header {
     z-index: 5;
     margin-bottom: 20px;
     clip-path: ellipse(75% 100% at 50% 0%);
+    transition: all 1s ease-in-out;
+}
+
+header:hover {
+    height: 50px;
 }
 
 header div.logo {
@@ -41,7 +57,7 @@ header div.logo {
 }
 
 div.logo a:hover {
-    color: rgb(128 119 252);
+    color: var(--color-hover);
 }
 
 span.one {
@@ -64,7 +80,7 @@ span.one {
 }
 
 span.two {
-    color: rgb(128 119 252);
+    color: var(--color-hover);
 }
 
 header div.nav {
@@ -78,7 +94,7 @@ header div.nav {
 header a {
     text-decoration: none;
     justify-self: right;
-    color: rgb(255, 255, 255);
+    color: var(--color-text1);
     font-size: 24px;
     padding: 10px 0;
     transition: 500ms ease-in-out;
@@ -87,23 +103,23 @@ header a {
 .nom {
     padding: 0 10px;
     border-radius: 5px;
-    background-color: rgb(128 119 252);
-    color: white;
+    background-color: var(--color-hover);
+    color: var(--color-text1);
     transition: 600ms ease-in-out;
     cursor: default;
 }
 
 .nom:hover {
-    background-color: rgb(31, 49, 66);
+    background-color: var(--background-header);
 }
 
 div.nav a:hover {
-    color: rgb(128 119 252);
+    color: var(--color-hover);
 }
 
 section {
     scroll-snap-align: start;
-    height: 100vh;
+    height: 500px;
     scroll-margin-top: 100px;
 }
 
@@ -149,11 +165,41 @@ div.flex-left::before {
 }
 
 section.sentence {
-    font-weight: bolder;
-    font-size: 19px;
     margin-top: 30px;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 3cm;
     justify-self: center;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    border-radius: 20px;
+    background-color: var(--background-section);
+}
+
+section.sentence div.moi {
+    border: solid 0.03mm rgba(221, 227, 233, 0.575);
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+section.sentence p {
+    font-size: 18px;
+    font-weight: light;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+section.sentence div.etude {
+    display: flex;
+    flex-direction: row;
+    gap: 5cm;
 }
 
 div.ma_section {
@@ -181,7 +227,7 @@ div.ma_section div img {
 }
 
 div.ma_section div img:hover {
-    background-color: rgb(128 119 252);
+    background-color: var(--color-hover);
     scale: 1.05;
 }
 
@@ -194,7 +240,7 @@ div.ma_section img.my_pict {
 }
 
 div.en_tete div.bottum {
-    background-color: rgb(128 119 252);
+    background-color: var(--color-hover);
     border-radius: 20px;
     padding: 10px;
     text-align: center;
@@ -203,7 +249,7 @@ div.en_tete div.bottum {
 }
 
 div.en_tete div.bottum:hover {
-    background-color: rgb(126, 180, 211);
+    background-color: var(--background-bottum-hover);
 }
 
 div p.intro {
@@ -222,20 +268,15 @@ a {
     color: black;
 }
 
-section.sentence {
-    height: 100vh;
-}
-
 section.competence {
     scroll-snap-align: start;
     justify-content: center;
     height: 100vh;
     width: 90%;
     justify-self: center;
-    padding-top: 5%;
     border-radius: 20px;
     position: relative;
-    background-color: aliceblue;
+    background-color: var(--background-section);
 }
 
 div.container img {
@@ -257,11 +298,11 @@ div.container {
 
 div.container div {
     display: flex;
-    color: white;
+    color: var(--color-text1);
     font-size: 20px;
     font-weight: bolder;
     gap: 50%;
-    background-color: rgb(31, 49, 66);
+    background-color: var(--background-header);
     border-radius: 20px;
     box-shadow: 1px 10px 9px -3px #09141e;
     transition: 600ms ease-in-out;
@@ -277,14 +318,14 @@ section.projet {
     align-items: center;
     justify-content: center;
     gap: 8cm;
-    background-color: aliceblue;
+    background-color: var(--background-section);
     width: 90%;
     justify-self: center;
     border-radius: 20px;
     margin-top: 30px;
 }
 
-section.projet div.ttl {
+section.projet ul.ttl {
     list-style: none;
 }
 
@@ -308,22 +349,22 @@ div.img_pro p {
 
 div.img_pro div {
     width: 250px;
-    background-color: rgb(126, 180, 211);
+    background-color: var(--color-hover);
     border-radius: 5px;
     height: 350px;
 }
 
 div.container div:hover {
-    background-color: rgb(48, 67, 85);
-    transform: translateY(-2px);
+    transform: translateY(2px);
 }
 
 section.contact {
     display: flex;
     flex-direction: row;
+    gap: 5cm;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    background-color: var(--background-section);
     width: 90%;
     justify-self: center;
     border-radius: 20px;
@@ -335,7 +376,7 @@ section.contact aside.form {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: rgb(31, 49, 66);
+    background-color: var(--background-header);
     padding: 20px;
     color: white;
     border-radius: 15px;
@@ -343,7 +384,7 @@ section.contact aside.form {
 }
 
 section.contact aside.form:hover {
-    filter: drop-shadow(0px 0px 10px rgba(128, 119, 252, 0.699));
+    filter: drop-shadow(0px 1px 10px rgba(128, 119, 252, 0.699));
 }
 
 section.contact aside p {
@@ -362,7 +403,7 @@ section.contact input {
     padding-bottom: 15px;
     padding-top: 15px;
     color: rgb(255, 255, 255);
-    background-color: rgba(149, 145, 233, 0.815);
+    background-color: var(--color-hover);
     border: none;
     border-radius: 50px;
     text-align: center;
@@ -372,10 +413,11 @@ section.contact input {
 section.contact textarea {
     height: 100px;
     resize: vertical;
+    padding-left: 20px;
 }
 
 section.contact button {
-    background-color: rgb(128, 119, 252);
+    background-color: var(--color-hover);
     color: white;
     border: none;
     padding: 10px;
@@ -385,13 +427,42 @@ section.contact button {
     margin-top: 30px;
     align-self: center;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.5s ease;
 }
 
-section.contact button:focus {
+section.contact button:active {
     outline: none;
 }
 
 section.contact button:hover {
-    background-color: rgb(100, 95, 200);
+    background-color: var(--background-bottum-hover);
+    color: var(--color-text);
+}
+
+aside.aside1 {
+    background-color: var(--color-hover);
+    width: 270px;
+    height: 421px;
+    border-radius: 15px;
+    justify-content: center;
+    justify-items: center;
+    transition: all 500ms ease-in-out;
+    color: var(--color-text1);
+}
+
+aside.aside1:hover {
+    filter: drop-shadow(0px 0px 5px rgba(128, 119, 252, 0.699));
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: -1px;
+    background-color: var(--background-header);
+    color: white;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    margin-top: 30px;
 }
