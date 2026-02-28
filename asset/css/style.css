@@ -720,7 +720,7 @@ h2.qui1 {
 
 /* --- Resposive --- */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1090px) {
     html {
         scrollbar-width: none;
         font-size: 16px;
