@@ -20,15 +20,20 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    flex: 1;
+}
+
 :root {
     --color-text1: white;
     --color-text: rgb(31, 49, 66);
     --background-header: rgb(31, 49, 66);
     --color-hover: rgb(128 119 252);
-    --background-section: aliceblue;
+    --background-section: rgb(218, 235, 250);
     --background-bottum-hover: rgb(175 201 235);
 }
 
+/*--Header style--*/
 header {
     background-color: var(--background-header);
     display: flex;
@@ -46,10 +51,6 @@ header {
     transition: all 1s ease-in-out;
 }
 
-header:hover {
-    height: 50px;
-}
-
 header div.logo {
     font-size: 30px;
     padding-top: 8px;
@@ -64,20 +65,6 @@ div.logo a:hover {
 span.one {
     color: aqua;
     animation: miova 1.4s ease-in alternate infinite;
-}
-
-@keyframes miova {
-    0% {
-        color: aqua;
-    }
-
-    50% {
-        color: rgb(255, 127, 127);
-    }
-
-    100% {
-        color: rgb(41, 51, 189);
-    }
 }
 
 span.two {
@@ -101,13 +88,23 @@ header a {
     transition: 500ms ease-in-out;
 }
 
-.nom {
-    padding: 0 10px;
-    border-radius: 5px;
-    background-color: var(--color-hover);
-    color: var(--color-text1);
-    transition: 600ms ease-in-out;
-    cursor: default;
+div.menu-bottum {
+    display: none;
+    height: 0;
+}
+
+@keyframes miova {
+    0% {
+        color: aqua;
+    }
+
+    50% {
+        color: rgb(255, 127, 127);
+    }
+
+    100% {
+        color: rgb(41, 51, 189);
+    }
 }
 
 .nom:hover {
@@ -140,6 +137,7 @@ section {
     scroll-margin-top: 100px;
 }
 
+/* --Premier section-- */
 div.en_tete {
     display: flex;
     flex-direction: row-reverse;
@@ -151,6 +149,15 @@ div.en_tete {
     padding: 20px;
 }
 
+.nom {
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: var(--color-hover);
+    color: var(--color-text1);
+    transition: 600ms ease-in-out;
+    cursor: default;
+}
+
 div.flex-left {
     opacity: 0;
     transform: translateY(-5px);
@@ -158,6 +165,30 @@ div.flex-left {
     margin-top: 7%;
     animation: apparition1 ease-in-out 600ms forwards;
     animation-delay: 300ms;
+}
+
+div.ma_section {
+    display: flex;
+    flex-direction: column;
+}
+
+div.ma_section div.contact {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+div.ma_section div img {
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: 500ms ease-in;
+    box-shadow: inset 20px -14px 20px -5px rgb(40 110 201);
 }
 
 div.flex-left::after {
@@ -183,104 +214,6 @@ div.flex-left::before {
     border-radius: 30px;
     height: 300px;
     background-color: rgba(135, 130, 226, 0.616);
-}
-
-section.sentence {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    gap: 2cm;
-    justify-self: center;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-    border-radius: 20px;
-    background-color: var(--background-section);
-}
-
-section.sentence div.moi {
-    border: solid 0.03mm rgba(221, 227, 233, 0.575);
-    border-radius: 10px;
-    background-color: white;
-    width: 60%;
-    margin-top: 20px;
-    padding: 40px;
-}
-
-section.sentence p {
-    font-size: 18px;
-    font-weight: light;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-}
-
-section.sentence div.etude {
-    display: flex;
-    flex-direction: row;
-    gap: 5cm;
-}
-
-div.ma_section {
-    display: flex;
-    flex-direction: column;
-}
-
-div.ma_section div.contact {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    justify-content: center;
-    gap: 15px;
-
-}
-
-a.el1 {
-    opacity: 0;
-    transform: translateY(4px);
-    animation: apparition1 ease-in-out 600ms forwards;
-    animation-delay: 340ms;
-}
-
-a.el2 {
-    opacity: 0;
-    transform: translateY(4px);
-    animation: apparition1 ease-in-out 700ms forwards;
-    animation-delay: 340ms;
-}
-
-a.el3 {
-    opacity: 0;
-    transform: translateY(4px);
-    animation: apparition1 ease-in-out 800ms forwards;
-    animation-delay: 340ms;
-}
-
-a.el4 {
-    opacity: 0;
-    transform: translateY(4px);
-    animation: apparition1 ease-in-out 900ms forwards;
-    animation-delay: 340ms;
-}
-
-img.el5 {
-    opacity: 0;
-    transform: translateY(4px);
-    animation: apparition1 ease-in-out 1s forwards;
-    animation-delay: 380ms;
-}
-
-div.ma_section div img {
-    height: 20px;
-    width: 20px;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    transition: 500ms ease-in;
-    box-shadow: inset 20px -14px 20px -5px rgb(40 110 201);
 }
 
 div.ma_section div img:hover {
@@ -328,22 +261,49 @@ div p.phrase {
     padding-left: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
 
-section.competence {
-    scroll-snap-align: start;
-    height: 100vh;
+/* --Deuxième Section-- */
+section.sentence {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    margin-top: 50px;
-    align-content: center;
+    gap: 2cm;
     justify-self: center;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
     border-radius: 20px;
-    position: relative;
     background-color: var(--background-section);
 }
+
+section.sentence div.moi {
+    border: solid 0.03mm rgba(221, 227, 233, 0.575);
+    border-radius: 10px;
+    background-color: var(--background-bottum-hover);
+    width: 60%;
+    margin-top: 20px;
+    padding: 40px;
+    transition: all 500ms ease;
+}
+
+section.sentence p {
+    font-size: 18px;
+    font-weight: light;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+section.sentence div.etude {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5.5cm;
+    font-weight: bolder;
+}
+
 
 div.etude img {
     height: 80px;
@@ -358,11 +318,85 @@ div.etude div {
     border: solid 0.03mm rgba(221, 227, 233, 0.575);
 }
 
-div.etude div,
+div.etude div {
+    transition: 500ms ease-in-out;
+    border-radius: 10px;
+    background-color: var(--background-bottum-hover);
+}
+
 div.etude img {
     transition: 500ms ease-in-out;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-text1);
+}
+
+div.etude div:hover,
+section.sentence div.moi:hover,
+div.etude img:hover {
+    background-color: rgba(197, 211, 250, 0.596);
+}
+
+/* --- Animation sur la premiere section --- */
+a.el1 {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: apparition1 ease-in-out 600ms forwards;
+    animation-delay: 340ms;
+}
+
+a.el2 {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: apparition1 ease-in-out 700ms forwards;
+    animation-delay: 340ms;
+}
+
+a.el3 {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: apparition1 ease-in-out 800ms forwards;
+    animation-delay: 340ms;
+}
+
+a.el4 {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: apparition1 ease-in-out 900ms forwards;
+    animation-delay: 340ms;
+}
+
+img.el5 {
+    opacity: 0;
+    transform: translateY(4px);
+    animation: apparition1 ease-in-out 1s forwards;
+    animation-delay: 380ms;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* --- Troisième section du main --- */
+section.competence {
+    height: 500px;
+    width: 90%;
+    margin-top: 50px;
+    align-content: center;
+    justify-self: center;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--background-section);
+}
+
+section.competence h2 {
+    position: absolute;
+    margin-top: -36mm;
+    margin-right: -1px;
+    padding: 10px;
+    font-size: 30px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
 }
 
 div.container img {
@@ -392,12 +426,17 @@ div.container div {
     transition: 600ms ease-in-out;
 }
 
+div.container div:hover {
+    transform: scale(1.009);
+}
+
 div.framer {
     grid-column: 1/-1;
     width: 50%;
     justify-self: center;
 }
 
+/* --- Quatrième Section --- */
 section.projet {
     display: flex;
     flex-direction: row;
@@ -413,6 +452,21 @@ section.projet {
 
 section.projet ul.ttl {
     list-style: none;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    background-image: linear-gradient(to right, var(--background-section), var(--color-text1));
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    cursor: default;
+    transition: all 500ms ease-in-out;
+}
+
+div.img_pro div:hover {
+    box-shadow: 1px 3px 20px 5px var(--background-bottum-hover);
+    ;
 }
 
 div.img_pro {
@@ -438,12 +492,10 @@ div.img_pro div {
     background-color: var(--color-hover);
     border-radius: 5px;
     height: 350px;
+    transition: all 500ms ease-in-out;
 }
 
-div.container div:hover {
-    transform: scale(1.009);
-}
-
+/* --- Dérniere section du main --- */
 section.contact {
     display: flex;
     flex-direction: row;
@@ -516,7 +568,7 @@ section.contact button {
     transition: all 0.5s ease;
 }
 
-section.contact button:active {
+section.contact input:focus {
     outline: none;
 }
 
@@ -595,6 +647,7 @@ aside.aside1 img:hover {
     background-color: #c7def8;
 }
 
+/* --- Footer --- */
 footer {
     display: flex;
     flex-direction: column;
@@ -606,8 +659,10 @@ footer {
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
     margin-top: 30px;
+    margin-bottom: -1px;
 }
 
+/* --- Annimation --- */
 @keyframes apparition {
     from {
         opacity: 0;
@@ -625,4 +680,11 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* --- Resposive --- */
+
+@media screen and (max-width:768px) {
+    header {}
+
 }
