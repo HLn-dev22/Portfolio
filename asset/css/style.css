@@ -416,6 +416,10 @@ section.competence {
     background-color: var(--background-section);
 }
 
+h2.qui {
+    font-size: 43.9px;
+}
+
 section.competence h2 {
     position: absolute;
     margin-top: -36mm;
@@ -690,6 +694,10 @@ footer {
     margin-bottom: -1px;
 }
 
+h2.qui1 {
+    display: none;
+}
+
 /* --- Annimation --- */
 @keyframes apparition {
     from {
@@ -713,6 +721,185 @@ footer {
 /* --- Resposive --- */
 
 @media screen and (max-width:768px) {
-    header {}
+    html {
+        scrollbar-width: none;
+        font-size: 16px;
+    }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    header {
+        position: fixed;
+        clip-path: none;
+    }
+
+    header div.nav {
+        display: none;
+    }
+
+    div.flex-left::after,
+    div.flex-left::before {
+        display: none;
+    }
+
+    section.competence,
+    section.contact,
+    section.projet,
+    section.sentence {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 95%;
+        align-self: center;
+    }
+
+    /* First section */
+    div.en_tete {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    div.flex-left {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    div p.intro {
+        font-size: 33px;
+    }
+
+    div.en_tete div.bottum {
+        width: 70%;
+        align-self: center;
+    }
+
+    /* Second section */
+    section.sentence {
+        margin-top: 300px;
+        padding-bottom: 10px;
+    }
+
+    section.sentence div.moi {
+        padding: 5px;
+        width: 90%;
+    }
+
+    h2.qui {
+        margin-top: 5px;
+        font-size: 38px;
+        justify-self: center;
+        font-weight: bolder;
+    }
+
+    section.sentence p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    section.sentence div.etude {
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        gap: 10px;
+    }
+
+    div.etude div {
+        align-items: center;
+        justify-items: center;
+    }
+
+    div.etude div.etude1 {
+        grid-column: 1/-1;
+        align-items: center;
+        justify-self: center;
+    }
+
+    /* Third section */
+    section.competence h2 {
+        position: relative;
+        margin-top: -1px;
+        margin-right: 0;
+        padding: 10px;
+        font-size: 28px;
+        justify-self: center;
+        border-bottom-left-radius: 20px;
+    }
+
+    section.competence {
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+    /* Fourth section */
+    section.projet {
+        padding-bottom: 20px;
+    }
+
+    div.container {
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+        gap: 10px;
+        width: 80%;
+        flex-direction: column;
+    }
+
+    div.framer {
+        width: 100%;
+    }
+
+    h2.qui1 {
+        font-size: 30px;
+        margin-top: -1px;
+        display: block;
+        background-color: white;
+        padding: 10px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    section.projet ul.ttl {
+        display: none;
+    }
+
+    div.img_pro {
+        width: 250px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        position: relative;
+        scrollbar-width: none;
+        position: relative;
+    }
+
+    div.img_pro::after {
+        content: '';
+        position: absolute;
+        height: 40px;
+        width: auto;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    div.img_pro div {
+        scroll-snap-align: start;
+    }
+
+    /* Fifth section */
+    div.ell2 {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    section.contact {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
