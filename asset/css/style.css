@@ -498,7 +498,13 @@ section.projet ul.ttl {
 
 div.img_pro div:hover {
     box-shadow: 1px 3px 20px 5px var(--background-bottum-hover);
-    ;
+    overflow: hidden;
+    transform: translateY(-5px);
+
+    img {
+        transform: scale(1.03);
+        object-fit: cover;
+    }
 }
 
 div.img_pro {
@@ -508,10 +514,11 @@ div.img_pro {
 }
 
 div.img_pro img {
-    width: 250px;
-    object-fit: contain;
-    height: auto;
-    border-radius: 5px;
+    width: auto;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 500ms ease-in-out;
 }
 
 div.img_pro p {
@@ -525,6 +532,7 @@ div.img_pro div {
     border-radius: 5px;
     height: 350px;
     transition: all 500ms ease-in-out;
+    overflow: hidden;
 }
 
 /* --- Dérniere section du main --- */
@@ -677,6 +685,7 @@ aside.aside1 img {
 
 aside.aside1 img:hover {
     background-color: #c7def8;
+    transform: scale(1.03);
 }
 
 /* --- Footer --- */
