@@ -44,6 +44,15 @@ main {
     flex: 1;
 }
 
+section.competence,
+section.contact,
+section.sentence,
+section.projet {
+    margin-bottom: 5cm;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+        0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
 :root {
     --color-text1: white;
     --color-text: rgb(31, 49, 66);
@@ -516,8 +525,7 @@ div.img_pro {
 div.img_pro img {
     width: auto;
     height: 170px;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
     transition: all 500ms ease-in-out;
 }
 
@@ -531,8 +539,8 @@ div.img_pro div {
     background-color: var(--color-hover);
     border-radius: 5px;
     height: 350px;
+    scrollbar-width: none;
     transition: all 500ms ease-in-out;
-    overflow: hidden;
 }
 
 /* --- Dérniere section du main --- */
@@ -887,9 +895,15 @@ h2.qui1 {
         scroll-snap-type: x mandatory;
         position: relative;
         scrollbar-width: none;
-        position: relative;
     }
-div.img_pro img{width:250px;}
+
+    div.img_pro img {
+        width: 250px;
+        object-fit: contain;
+        object-position: center;
+        transition: all 500ms ease-in-out;
+    }
+
     div.img_pro::after {
         content: '';
         position: absolute;
@@ -1105,6 +1119,12 @@ div.img_pro img{width:250px;}
         transform: translateY(-50%);
     }
 
+    div.img_pro img {
+        object-fit: contain;
+        width: 250px;
+        height: auto;
+    }
+
     div.img_pro div {
         scroll-snap-align: start;
     }
@@ -1120,5 +1140,11 @@ div.img_pro img{width:250px;}
     section.contact {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width:1090px) {
+    div.img_pro div {
+        overflow-y: hidden;
     }
 }
