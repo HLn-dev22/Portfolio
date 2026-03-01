@@ -694,6 +694,11 @@ footer {
     margin-bottom: -1px;
 }
 
+input::placeholder {
+    color: white;
+    font-weight: bolder;
+}
+
 h2.qui1 {
     display: none;
 }

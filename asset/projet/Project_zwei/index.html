@@ -4,75 +4,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les animeaux endémique de Madagascar</title>
+    <title>Animaux endémiques de Madagascar</title>
+    <link rel="icon" href="asset/img/baobab.png" type="image/png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 
 <body>
+
+    <!-- ===== HEADER ===== -->
     <header>
-        <div>
-            <img src="asset/img/logo.png" alt="Logo - The Essence of Animals">
-            <div class="vertical-text">
-                <div class="lettre lettre1">A</div>
-                <div class="lettre lettre2">N</div>
-                <div class="lettre lettre3">I</div>
-                <div class="lettre lettre4">M</div>
-                <div class="lettre lettre5">A</div>
-                <div class="lettre lettre6">L</div>
-                <div class="lettre lettre7">S</div>
+        <div class="header-inner">
+            <img src="asset/img/logo.png" alt="Logo – L’essence des animaux">
+            <div class="vertical-text" aria-label="Animaux">
+                <span class="lettre lettre1">A</span>
+                <span class="lettre lettre2">N</span>
+                <span class="lettre lettre3">I</span>
+                <span class="lettre lettre4">M</span>
+                <span class="lettre lettre5">A</span>
+                <span class="lettre lettre6">L</span>
+                <span class="lettre lettre7">S</span>
             </div>
         </div>
     </header>
+
+    <!-- ===== MAIN ===== -->
     <main>
-        <section>
-            <div class="cercle">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>L’essence des animaux</h1>
+                <p class="hero-text">
+                    Madagascar abrite une faune parmi les plus extraordinaires au monde.
+                    Isolée pendant des millions d’années, cette île a vu naître des espèces que l’on ne trouve
+                    nulle part ailleurs sur Terre — une preuve vivante de la créativité infinie de la nature.
+                </p>
             </div>
-            <div class="container composant">
-                <div class="item item1">
-                    <a href=""><img src="asset/img/images.png" alt="Illustration d'un animal" class="pict"></a>
-                </div>
-                <div class=" item item2">
-                    <a href=""><img src="asset/img/requin.png" alt="Illustration d'un requin" class="pict pictR"></a>
-                </div>
-                <div class="item item3"><a href="snike.html"><img src="asset/img/Snike.png"
-                            alt="Illustration - Serpent (Snike)" class="pict"></a>
-                </div>
-                <div class="item item4">
-                    <a href=""><img src="asset/img/fourmi.png" alt="Illustration d'une fourmi" class="pictF"></a>
-                </div>
-                <div class="item item5"><a href="mki.html"><img src="asset/img/mki.png"
-                            alt="Illustration d'un maki (lémurien)" class="pictA"></a></div>
-                <div class="item item6"><a href=""><img src="asset/img/cameleon.png" alt="Illustration d'un caméléon"
-                            class="pict"></a></div>
-                <div class="item item7"><a href=""><img src="asset/img/Gepard1.png" alt="Illustration d'un guépard"
-                            class="pictB"></a></div>
-                <!-- <div class="item item8"><a href=""><img src="links.png" alt="" class="pict pictC"></a></div>' -->
-            </div>
+            <img src="asset/img/baobab.png" alt="Illustration d’un baobab" class="hero-baobab" aria-hidden="true">
         </section>
-        <h1>The Essence of Animals</h1>
-        <section class="intro-text">
-            <div>
-                <p class="description">Animals bring life, balance, and beauty to our world. Each species carries its
-                    own strength,
-                    intelligence, and unique way of surviving. From the quiet patience of hunters to the gentle harmony
-                    of herbivores, they remind us of nature’s wisdom. Their movements, instincts, and connections
-                    inspire us to respect and protect the natural world they help sustain.</p>
-            </div>
-            <img src="asset/img/lion (2).png" alt="Illustration d'un lion" class="tigre">
+
+        <!-- Animals Gallery -->
+        <section class="gallery" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading" class="gallery-title">7 espèces endémiques</h2>
+
+            <div class="cards-grid">
+
+                <!-- Card 1 – Fossa -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="asset/img/fossa-3.webp" alt="Un fossa accroupi sur une branche" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-name">Fossa</h3>
+                        <p class="card-latin">Cryptoprocta ferox</p>
+                        <p class="card-desc">
+                            Le prédateur suprême de Madagascar. À l’apparence féline mais apparenté aux mangoustes,
+                            le fossa chasse les lémuriens dans la canopée avec une agilité remarquable.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 2 – Aye-aye -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="asset/img/aye-aye-3.webp" alt="Un aye-aye accroché à un arbre la nuit" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-name">Aye-aye</h3>
+                        <p class="card-latin">Daubentonia madagascariensis</p>
+                        <p class="card-desc">
+                            Le plus grand primate nocturne au monde utilise son doigt médian allongé pour
+                            tapoter l’écorce et extraire des larves — une niche écologique occupée ailleurs par les
+                            pics.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 3 – Radiated Tortoise -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="asset/img/radiated-tortoise-1.webp"
+                            alt="Une tortue radiée montrant sa carapace au motif étoilé" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-name">Tortue radiée</h3>
+                        <p class="card-latin">Astrochelys radiata</p>
+                        <p class="card-desc">
+                            Reconnaissable à sa spectaculaire carapace en forme d’étoile, cette tortue en danger
+                            critique
+                            peut vivre plus de 100 ans dans les forêts épineuses du sud de Madagascar.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 4 – Madagascar Flying Fox -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="asset/img/pteropus_rufus.webp" alt="Une roussette de Madagascar suspendue à un arbre"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-name">Roussette de Madagascar</h3>
+                        <p class="card-latin">Pteropus rufus</p>
+                        <p class="card-desc">
+                            Avec une envergure dépassant un mètre, cette grande chauve-souris frugivore est un
+                            pollinisateur
+                            et disperseur de graines essentiel, contribuant à la survie des forêts malgaches.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 5 – Satanic Leaf-Tailed Gecko -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="asset/img/uroplatus_phantasticus.webp"
+                            alt="Un gecko satanique à queue de feuille camouflé sur une écorce" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-name">Gecko satanique à queue de feuille</h3>
+                        <p class="card-latin">Uroplatus phantasticus</p>
+                        <p class="card-desc">
+                            Maître du camouflage : sa queue en forme de feuille et sa peau marbrée le rendent presque
+                            invisible sur l’écorce des arbres, lui valant l’un des noms les plus spectaculaires de la
+                            nature.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 6 – Ring-tailed Lemur -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="asset/img/mki.png" alt="Un lémur catta avec sa queue annelée dressée" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-name">Lémur catta</h3>
+                        <p class="card-latin">Lemur catta</p>
+                        <p class="card-desc">
+                            Symbole emblématique de Madagascar, immédiatement reconnaissable à sa queue annelée noire et
+                            blanche.
+                            Social et vocal, il se chauffe au soleil chaque matin dans une posture dite de « culte du
+                            soleil ».
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 7 – Indri -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="asset/img/Ye84ZWESqBBgarsbl9ve.webp" alt="Un indri agrippé au tronc d’un arbre"
+                            loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-name">Indri</h3>
+                        <p class="card-latin">Indri indri</p>
+                        <p class="card-desc">
+                            Le plus grand lémurien vivant, dont le chant mélancolique, semblable à celui d’une baleine,
+                            résonne dans la forêt tropicale. Strictement protégé, il ne peut survivre en captivité.
+                        </p>
+                    </div>
+                </article>
+
+            </div><!-- /.cards-grid -->
         </section>
+
     </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-content">
-            <img src="asset/img/baobab.png" alt="Illustration d'un baobab" class="img-baobab1">
-            <img src="asset/img/baobab.png" alt="Illustration d'un baobab" class="img-baobab2">
+            <p class="footer-note">Madagascar – Le 8ᵉ continent de la biodiversité</p>
+            <span>
+                <div><img src="asset/img/baobab.png" alt="Illustration de baobab" class="img-baobab1"
+                        aria-hidden="true"></div>
+                <div><img src="asset/img/baobab.png" alt="Illustration de baobab" class="img-baobab2"
+                        aria-hidden="true"></div>
+            </span>
         </div>
     </footer>
+
 </body>
 
 </html>
