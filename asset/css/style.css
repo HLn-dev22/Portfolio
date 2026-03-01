@@ -889,7 +889,7 @@ h2.qui1 {
         scrollbar-width: none;
         position: relative;
     }
-
+div.img_pro img{width:250px;}
     div.img_pro::after {
         content: '';
         position: absolute;
