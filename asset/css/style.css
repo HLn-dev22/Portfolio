@@ -44,6 +44,14 @@ main {
     flex: 1;
 }
 
+main div.section {
+    background-color: var(--background-header);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 125px;
+    margin-bottom: -25px;
+}
+
 section.competence,
 section.contact,
 section.sentence,
@@ -703,8 +711,8 @@ footer {
     align-items: center;
     gap: 10px;
     padding-bottom: -1px;
-    background-color: var(--background-header);
-    color: white;
+    background-color: var(--color-text1);
+    color: var(--background-header);
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
     margin-top: 30px;
